@@ -1,0 +1,50 @@
+@imprt '../../variables.scss';
+
+.ax-link {
+  text-decoration: none;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 1px;
+  transition: background-size 0.5s cubic-bezier(.215, .61, .355, 1);
+  font-weight: $weight-normal;
+  font-size: $font-size-base;
+  line-height: $line-height-s;
+  color: $black;
+  cursor: pointer;
+
+  &:focus,
+  &:hover,
+  &.active {
+    background-size: 100% 1px;
+  }
+
+  &.reversed {
+    background-size: 100% 1px;
+
+    &:focus,
+    &:hover,
+    &.active {
+      background-size: 0% 1px;
+    }
+  }
+}
+
+.button-purple {
+  display: inline-block;
+  padding: 1rem 1.5rem;
+  color: $white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-size: $font-size-large;
+  font-weight: $weight-medium;
+  background: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: $transition-base;
+  width: fit-content;
+
+  &:hover {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
+  }
+}
