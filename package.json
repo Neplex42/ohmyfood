@@ -1,0 +1,17 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "scss": "sass src/scss:dist/css",
+    "watch-scss": "sass --watch src/scss/main.scss:dist/css/styles.css",
+    "build-css": "sass src/scss:dist/css --style=compressed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.77.6"
+  }
+}
