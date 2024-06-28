@@ -1,18 +1,11 @@
 // Helpers
-@import 'helpers/variables.scss';
-@import 'helpers/mixins.scss';
-@import 'helpers/functions.scss';
+@import 'helpers/helpers.scss';
 
 // Components
-@import 'components/button.scss';
-@import 'components/card-article.scss';
-@import 'components/badge.scss';
-@import 'components/heart.scss';
+@import 'components/components.scss';
 
 // Layout
-@import 'layout/header.scss';
-@import 'layout/footer.scss';
-@import 'layout/general.scss';
+@import 'layout/layout.scss';
 @import 'layout/reset.scss';
 
 // Sections

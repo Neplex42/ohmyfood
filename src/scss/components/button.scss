@@ -1,38 +1,8 @@
-@imprt '../../variables.scss';
-
-.ax-link {
-  text-decoration: none;
-  background-image: linear-gradient(currentColor, currentColor);
-  background-position: 0% 100%;
-  background-repeat: no-repeat;
-  background-size: 0% 1px;
-  transition: background-size 0.5s cubic-bezier(.215, .61, .355, 1);
-  font-weight: $weight-normal;
-  font-size: $font-size-base;
-  line-height: $line-height-s;
-  color: $black;
-  cursor: pointer;
-
-  &:focus,
-  &:hover,
-  &.active {
-    background-size: 100% 1px;
-  }
-
-  &.reversed {
-    background-size: 100% 1px;
-
-    &:focus,
-    &:hover,
-    &.active {
-      background-size: 0% 1px;
-    }
-  }
-}
+@import '../helpers/helpers';
 
 .button-purple {
   display: inline-block;
-  padding: 1rem 1.5rem;
+  padding: 1.6rem 2.2rem;
   color: $white;
   text-decoration: none;
   border-radius: 50px;

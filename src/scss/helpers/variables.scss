@@ -1,3 +1,8 @@
+//Font Family
+
+$font-title: 'Shrikhand', cursive;
+$font-base: 'Roboto', sans-serif;
+
 //Font Weight
 $weight-light: 300;
 $weight-normal: 400;
@@ -44,26 +49,29 @@ $font-size-h3: 1.6rem; // 16px
 $font-size-h4: 1.4rem; // 14px
 
 //Colors
-$white: #F3F3F3;
-$black: #000000;
 $light-green: #99E2D0;
 $green: #008766;
 $light-blue: #89C8FA;
 $blue: #003A68;
 $purple: #9356DC;
+$purple-light: #F5EDFF;
+
+$white: #F3F3F3;
+$black: #000000;
+$gray-dark: #353535;
+$gray: #F6F6F6;
+$gray-light: #EAEAEA;
+$lighter-grey-bg: #F7F7F7;
+$footer-bg: #353535;
+
+//Transition
+$transition-base: all 0.3s ease-in-out;
 
 //Components
 $transition-base: all .2s ease-in-out;
 
-//Grid
-$grid-gutter-width:    13px;
-$grid-container-width: 50px;
-
-//Container page-width
-$page-width-cutom: 49px;
-$page-width-cutom-mobile: 18px;
-$page-width-small: 120px;
-$page-width-medium: 140px;
+//Container content width
+$max-content-width: 1200px;
 
 //Media queries
 $grid-breakpoints: (

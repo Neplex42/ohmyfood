@@ -1,0 +1,73 @@
+@import '../helpers/helpers';
+
+.restaurants {
+  background-color: $lighter-grey-bg;
+  padding-top: 5.5rem;
+  padding-bottom: 6rem;
+
+  @include media(max-content-width) {
+    border-radius: 15px;
+  }
+
+  .restaurants__title {
+    margin-bottom: 2rem;
+  }
+
+  .restaurants__cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    @include media(tablet) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    @include media(desktop) {
+      justify-content: space-around;
+      flex-direction: row;
+    }
+
+    .restaurants__card {
+      border-radius: 15px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: $transition-base;
+
+      &:hover {
+        img {
+          transform: scale(1.04);
+        }
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+        max-height: 175px;
+        object-fit: cover;
+        transition: $transition-base;
+      }
+
+      .restaurants__card-content {
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        .restaurants__card-title {
+          font-size: 18px;
+          font-weight: 700;
+          margin-bottom: 0.5rem;
+        }
+
+        .restaurants__card-location {
+          font-size: 17px;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+}

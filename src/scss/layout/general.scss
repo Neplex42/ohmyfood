@@ -1,8 +1,3 @@
-html {
-  font-family: 'Roboto', sans-serif;
-  font-size: 62.5%;
-}
-
 a {
 	&:not([href]):not(.button) {
 		cursor: auto;
@@ -12,9 +7,12 @@ a {
 		bottom: 0;
 		content: '';
 		left: 0;
-		position: absolute;
 		right: 0;
 		top: 0;
 		z-index: 1;
 	}
+}
+
+.section {
+	padding: 0 1.5rem;
 }

@@ -1,42 +1,22 @@
-//Media query up
-@mixin media-breakpoint-up($name, $breakpoints: $grid-breakpoints) {
-	$min: breakpoint-min($name, $breakpoints);
-	@if $min {
-		@media (min-width: $min) {
+// media queries
+@mixin media($breakpoint) {
+	@if $breakpoint == phone {
+		@media only screen and (max-width: 767px) {
 			@content;
 		}
-	} @else {
-		@content;
 	}
-}
-
-//Media query down
-@mixin media-breakpoint-down($name, $breakpoints: $grid-breakpoints) {
-	$max: breakpoint-max($name, $breakpoints);
-	@if $max {
-		@media (max-width: $max) {
+	@if $breakpoint == tablet {
+		@media only screen and (min-width: 768px) and (max-width: 1023px) {
 			@content;
 		}
-	} @else {
-		@content;
 	}
-}
-
-//Media query only
-@mixin media-breakpoint-only($name, $breakpoints: $grid-breakpoints) {
-	$min: breakpoint-min($name, $breakpoints);
-	$max: breakpoint-max($name, $breakpoints);
-
-	@if $min != null and $max != null {
-		@media (min-width: $min) and (max-width: $max) {
+	@if $breakpoint == desktop {
+		@media only screen and (min-width: 1024px) {
 			@content;
 		}
-	} @else if $max == null {
-		@include media-breakpoint-up($name, $breakpoints) {
-			@content;
-		}
-	} @else if $min == null {
-		@include media-breakpoint-down($name, $breakpoints) {
+	}
+	@if $breakpoint == max-content-width {
+		@media only screen and (min-width: $max-content-width) {
 			@content;
 		}
 	}
@@ -47,4 +27,38 @@
   display: flex;
   justify-content: $justify-content;
   align-items: $align-items;
+}
+
+@mixin ax-link($font-size: $font-size-base, $color: $white) {
+  position: relative;
+  border: none;
+  padding: 3px 0;
+  transition: all 0.5s cubic-bezier(.215, .61, .355, 1);
+  font-size: $font-size;
+  line-height: 1;
+  text-decoration: none;
+  color: $color;
+  cursor: pointer;
+  width: fit-content;
+
+  &:hover {
+    &::before {
+      left: 0;
+      right: 0;
+      opacity: 1;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 100%;
+    bottom: 0;
+    display: block;
+    border-bottom: 1px solid $color;
+    opacity: 1;
+    transition: all 0.5s cubic-bezier(.215, .61, .355, 1);
+    z-index: 2;
+  }
 }
