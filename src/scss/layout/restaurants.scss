@@ -5,12 +5,16 @@
   padding-top: 5.5rem;
   padding-bottom: 6rem;
 
-  @include media(max-content-width) {
-    border-radius: 15px;
+  @include media(desktop) {
+    padding-bottom: 2.2rem;
   }
 
   .restaurants__title {
     margin-bottom: 2rem;
+
+    @include media(desktop) {
+      margin-bottom: 2.7rem;
+    }
   }
 
   .restaurants__cards {
@@ -27,6 +31,9 @@
     @include media(desktop) {
       justify-content: space-around;
       flex-direction: row;
+      row-gap: 5rem;
+      column-gap: 10rem;
+      flex-wrap: wrap;
     }
 
     .restaurants__card {
@@ -35,6 +42,10 @@
       overflow: hidden;
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
       transition: $transition-base;
+
+      @include media(desktop) {
+        min-width: calc(50% - 50px);
+      }
 
       &:hover {
         img {
@@ -58,14 +69,14 @@
         align-items: center;
 
         .restaurants__card-title {
-          font-size: 18px;
-          font-weight: 700;
+          font-size: $font-size-super-large;
+          font-weight: $weight-bold;
           margin-bottom: 0.5rem;
         }
 
         .restaurants__card-location {
-          font-size: 17px;
-          font-weight: 300;
+          font-size: 1.7rem;
+          font-weight: $weight-light;
         }
       }
     }

@@ -45,5 +45,9 @@
 
 	.fonctionnement__step-text {
 		font-weight: bold;
+
+		@include media(desktop) {
+			min-width: max-content;
+		}
 	}
 }

@@ -5,8 +5,14 @@
   height: 6.2rem;
   box-shadow: 0 4px 9px -6px rgba(0, 0, 0, 0.5);
   z-index: 1;
-  max-width: 1200px;
+  max-width: $max-content-width;
   position: relative;
+  margin: 0 auto;
+
+  @include media(tablet) {
+    box-shadow: unset;
+    height: 9.6rem;
+  }
 
   .header__logo {
     width: 100%;
@@ -16,6 +22,10 @@
     img {
       width: 17rem;
       height: 100%;
+
+      @include media(tablet) {
+        width: 20rem;
+      }
     }
   }
 }

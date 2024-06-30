@@ -1,18 +1,22 @@
 a {
-	&:not([href]):not(.button) {
-		cursor: auto;
-	}
+  &:not([href]):not(.button) {
+    cursor: auto;
+  }
 
-	&.full-unstyled-link:not([aria-disabled])::after {
-		bottom: 0;
-		content: '';
-		left: 0;
-		right: 0;
-		top: 0;
-		z-index: 1;
-	}
+  &.full-unstyled-link:not([aria-disabled])::after {
+    bottom: 0;
+    content: '';
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1;
+  }
 }
 
 .section {
-	padding: 0 1.5rem;
+  padding: 0 1.5rem;
+
+  @include media(desktop) {
+    padding: 0 18rem;
+  }
 }
