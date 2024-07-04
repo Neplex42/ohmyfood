@@ -57,12 +57,12 @@ main {
     }
   }
 
-  .section.fonctionnement {
+  .fonctionnement {
     padding: 5rem 2rem 6rem;
     counter-reset: fonctionnement-counter;
 
-    @include media(tablet) {
-      padding: 5rem 18rem 5rem;
+    @include media(desktop) {
+      padding: 5rem 2rem 4.5rem;
     }
 
     .fonctionnement__title {
@@ -76,7 +76,6 @@ main {
 
       @include media(desktop) {
         flex-direction: row;
-        justify-content: space-evenly;
       }
     }
   }

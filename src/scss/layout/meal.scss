@@ -11,7 +11,7 @@
 
   @include media(tablet) {
     max-width: 105.5rem;
-    margin: -4rem auto 2.5rem;
+    margin: -4rem auto 0;
   }
 
   .meal__header {
@@ -50,6 +50,10 @@
     animation: my-animation 900ms ease-out;
     animation-fill-mode: backwards;
 
+    @include media(tablet) {
+      width: 100%;
+    }
+
     @for $i from 1 through 10 {
       &:nth-child(#{$i}) {
         animation-delay: 300ms * $i;
@@ -61,8 +65,9 @@
 .meal {
   margin: 1rem 0 4.3rem;
 
-  @include media(desktop) {
-    margin: 2rem 0 3rem;
+  @include media(tablet) {
+    margin: 3rem auto 4.5rem;
+    max-width: 65.5rem;
   }
 
   .meal__type {
@@ -74,10 +79,6 @@
 
     @include media(tablet) {
       margin: 0 1rem 2rem;
-    }
-
-    @include media(desktop) {
-      margin: 0 1rem 3rem;
     }
 
     &:after {

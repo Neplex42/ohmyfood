@@ -61,8 +61,12 @@ $clear-delay: 3.8s;
     animation: fadeout 0.1s ease-in-out $animation-delay forwards;
 
     p {
-      font-size: $font-size-h2;
+      font-size: $font-size-h2-mobile;
       font-family: $font-title;
+
+      @include media(tablet) {
+        font-size: $font-size-h2;
+      }
     }
 
     .words {
@@ -75,8 +79,12 @@ $clear-delay: 3.8s;
         padding-left: .6rem;
         color: $light-green;
         animation: spin_4991 4s infinite;
-        font-size: $font-size-h2;
+        font-size: $font-size-h2-mobile;
         font-family: $font-title;
+
+        @include media(tablet) {
+          font-size: $font-size-h2;
+        }
       }
     }
   }
