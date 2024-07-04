@@ -50,10 +50,6 @@
     animation: my-animation 900ms ease-out;
     animation-fill-mode: backwards;
 
-    @include media(tablet) {
-      width: 100%;
-    }
-
     @for $i from 1 through 10 {
       &:nth-child(#{$i}) {
         animation-delay: 300ms * $i;
