@@ -12,6 +12,9 @@
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   transition: $transition-base;
   width: fit-content;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 
   &:hover {
     background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);

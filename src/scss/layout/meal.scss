@@ -1,0 +1,121 @@
+@import '../helpers/helpers';
+
+.meal__container {
+  background-color: $gray;
+  padding-bottom: 4rem;
+  z-index: 2;
+  position: relative;
+  margin-top: -3rem;
+  border-top-right-radius: 35px;
+  border-top-left-radius: 35px;
+
+  @include media(tablet) {
+    max-width: 105.5rem;
+    margin: -4rem auto 2.5rem;
+  }
+
+  .meal__header {
+    @include flex(flex-start, center);
+    gap: 3.5rem;
+    width: 100%;
+    border-top-right-radius: 35px;
+    border-top-left-radius: 35px;
+    padding: 3.5rem 1rem 1rem;
+    bottom: 0;
+    background-color: $gray;
+
+    @include media(tablet) {
+      @include flex(center, center);
+      gap: 3rem;
+      padding: 5rem 1rem 1rem;
+    }
+
+    &-title {
+      font-size: 2.8rem;
+      margin: 0 0 0 0.5rem;
+    }
+
+    .heart-wrapper {
+      margin: 0;
+    }
+
+    .banner__restaurant-btn {
+      font-size: 1.7rem;
+      margin-right: 1rem;
+      position: relative;
+    }
+  }
+
+  .meal__card {
+    animation: my-animation 900ms ease-out;
+    animation-fill-mode: backwards;
+
+    @for $i from 1 through 10 {
+      &:nth-child(#{$i}) {
+        animation-delay: 300ms * $i;
+      }
+    }
+  }
+}
+
+.meal {
+  margin: 1rem 0 4.3rem;
+
+  @include media(desktop) {
+    margin: 2rem 0 3rem;
+  }
+
+  .meal__type {
+    width: fit-content;
+    text-transform: uppercase;
+    font-weight: normal;
+    margin: 1.5rem 1.2rem 2rem;
+    position: relative;
+
+    @include media(tablet) {
+      margin: 0 1rem 2rem;
+    }
+
+    @include media(desktop) {
+      margin: 0 1rem 3rem;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      width: 40px;
+      height: 3px;
+      left: 0;
+      bottom: -.8rem;
+      background-color: $light-green;
+    }
+  }
+
+  .meal__cards {
+    @include flex(space-between, center);
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin: 0 1rem;
+  }
+}
+
+@keyframes my-animation {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.meal__btn-container {
+  @include flex(center, center);
+
+  .button-purple {
+    padding: 1.6rem 5rem;
+  }
+}

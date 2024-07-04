@@ -36,15 +36,16 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  padding: 0 2rem;
 
   .return-arrow {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     color: $black;
     transition: $transition-base;
-  }
 
-  .header.header__restaurant .return-arrow:hover {
-    color: #9356DC;
-    transform: translateX(-0.2rem);
+    &:hover {
+      color: #9356DC;
+      transform: translateX(-0.2rem);
+    }
   }
 }

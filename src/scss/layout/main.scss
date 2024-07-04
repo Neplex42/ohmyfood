@@ -62,7 +62,7 @@ main {
     counter-reset: fonctionnement-counter;
 
     @include media(tablet) {
-      padding: 5rem 18rem 6rem;
+      padding: 5rem 18rem 5rem;
     }
 
     .fonctionnement__title {

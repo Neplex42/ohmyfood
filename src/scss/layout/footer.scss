@@ -43,8 +43,8 @@
     }
 
     @include media(desktop) {
-      flex-direction: row;
-      justify-content: space-between;
+      gap: 2.5rem;
+      margin-right: 6rem;
     }
 
     .footer__link {

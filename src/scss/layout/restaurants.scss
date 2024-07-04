@@ -5,14 +5,15 @@
   padding-top: 5.5rem;
   padding-bottom: 6rem;
 
-  @include media(desktop) {
+  @include media(tablet) {
     padding-bottom: 2.2rem;
+    padding-top: 2.5rem;
   }
 
   .restaurants__title {
     margin-bottom: 2rem;
 
-    @include media(desktop) {
+    @include media(tablet) {
       margin-bottom: 2.7rem;
     }
   }
@@ -26,14 +27,13 @@
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-between;
+      gap: 2rem;
     }
 
     @include media(desktop) {
       justify-content: space-around;
-      flex-direction: row;
       row-gap: 5rem;
       column-gap: 10rem;
-      flex-wrap: wrap;
     }
 
     .restaurants__card {
@@ -42,6 +42,10 @@
       overflow: hidden;
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
       transition: $transition-base;
+
+      @include media(tablet) {
+        min-width: calc(50% - 10px);
+      }
 
       @include media(desktop) {
         min-width: calc(50% - 50px);
